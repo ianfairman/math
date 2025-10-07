@@ -62,4 +62,17 @@ public class StatisticTest {
         assertEquals(15D, result);
 
     }
+    
+    @Test
+    void shouldReturnTwentyOneAsSumOfOneTwoThreeFourFiveSix() {
+        // Given
+        double[] input = {1D, 2D, 3D, 4D, 5D, 6D};
+        
+        // When
+        var result = Statistic.sum(input);
+        
+        // Then
+        assertEquals(21D, result);
+
+    }
 }

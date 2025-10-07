@@ -23,14 +23,14 @@ package io.github.ianfairman.math;
 public class Statistic {
     
     public static double arithmeticMean(double[] input) {
+        return sum(input)/input.length;
+    }
+    
+    public static double sum(double[] input) {
         var sum = 0D;
         for (var i = 0; i < input.length; ++i) {
             sum += input[i];
         }
-        return sum/input.length;
-    }
-    
-    public static double sum(double[] input) {
-        return 15D;
+        return sum;
     }
 }
