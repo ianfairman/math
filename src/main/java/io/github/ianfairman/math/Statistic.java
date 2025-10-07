@@ -23,6 +23,10 @@ package io.github.ianfairman.math;
 public class Statistic {
     
     public static double arithmeticMean(double[] input) {
-        return 3D;
+        var sum = 0D;
+        for (var i = 0; i < input.length; ++i) {
+            sum += input[i];
+        }
+        return sum/input.length;
     }
 }

@@ -37,4 +37,16 @@ public class StatisticTest {
         // Then
         assertEquals(3D, result);
     }
+    
+    @Test
+    void shouldReturnFiveForArithmeticMeanOfOneThreeFiveSevenNine() {
+        // Given
+        double[] input = {1D, 3D, 5D, 7D, 9D};
+        
+        // When
+        var result = Statistic.arithmeticMean(input);
+        
+        // Then
+        assertEquals(5D, result);
+    }
 }
