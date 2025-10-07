@@ -87,4 +87,16 @@ public class StatisticTest {
         assertArrayEquals(new double[]{-4D, 4D}, result);
     }
     
+    @Test 
+    void shouldReturnMinusThreeAndThreeAsDeviationForTwoAndEight() {
+        // Given
+        double[] input = {2D, 8D};
+        
+        // When
+        double result[] = Statistic.deviation(input);
+        
+        // Then
+        assertArrayEquals(new double[]{-3D, 3D}, result);
+    }
+    
 }

@@ -35,6 +35,11 @@ public class Statistic {
     }
     
     public static double[] deviation(double[] input) {
-        return new double[]{-4D, 4D};
+        double[] result = new double[input.length];
+        var average = arithmeticMean(input);
+        for(var i = 0; i < input.length; ++i) {
+            result[i] = input[i] - average;
+        }
+        return result;
     }
 }
