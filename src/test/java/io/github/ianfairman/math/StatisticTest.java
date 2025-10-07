@@ -49,4 +49,17 @@ public class StatisticTest {
         // Then
         assertEquals(5D, result);
     }
+    
+    @Test
+    void shouldReturnFifteenAsSumOfOneTwoThreeFourFive() {
+        // Given
+        double[] input = {1D, 2D, 3D, 4D, 5D};
+        
+        // When
+        var result = Statistic.sum(input);
+        
+        // Then
+        assertEquals(15D, result);
+
+    }
 }
