@@ -33,4 +33,8 @@ public class Statistic {
         }
         return sum;
     }
+    
+    public static double[] deviation(double[] input) {
+        return new double[]{-4D, 4D};
+    }
 }

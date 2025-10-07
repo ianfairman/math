@@ -73,6 +73,18 @@ public class StatisticTest {
         
         // Then
         assertEquals(21D, result);
-
     }
+    
+    @Test 
+    void shouldReturnMinusFourAndFourAsDeviationForOneAndNine() {
+        // Given
+        double[] input = {1D, 9D};
+        
+        // When
+        double result[] = Statistic.deviation(input);
+        
+        // Then
+        assertArrayEquals(new double[]{-4D, 4D}, result);
+    }
+    
 }
