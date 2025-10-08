@@ -121,5 +121,17 @@ public class StatisticTest {
         
         // Then
         assertArrayEquals(new double[]{4D, 16D, 64D}, result);
-   }
+    }
+    
+    @Test
+    void shouldCalculatePopulationVarianceWikipediaOne() {
+        // Given
+        double[] input = {2D, 4D, 4D, 4D, 5D, 5D, 7D, 9D};
+        
+        // When
+        double result = Statistic.populationVariance(input);
+        
+        // Then
+        assertEquals(4D, result);
+    }
 }

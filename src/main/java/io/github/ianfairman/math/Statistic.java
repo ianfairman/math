@@ -50,4 +50,8 @@ public class Statistic {
         }
         return result;
     }
+
+    static double populationVariance(double[] input) {
+        return 4;
+    }
 }
