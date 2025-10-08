@@ -52,6 +52,6 @@ public class Statistic {
     }
 
     static double populationVariance(double[] input) {
-        return 4;
+        return arithmeticMean(square(deviation(input)));
     }
 }

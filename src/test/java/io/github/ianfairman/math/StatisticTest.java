@@ -134,4 +134,16 @@ public class StatisticTest {
         // Then
         assertEquals(4D, result);
     }
+    
+    @Test
+    void shouldCalculatePopulationVarianceOne() {
+        // Given
+        double[] input = {16D, 11D, 9D, 8D, 1D};
+        
+        // When
+        double result = Statistic.populationVariance(input);
+        
+        // Then
+        assertEquals(23.6D, result, 0.001D);
+    }
 }
