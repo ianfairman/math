@@ -44,6 +44,10 @@ public class Statistic {
     }
 
     static double[] square(double[] input) {
-        return new double[]{1D, 25D, 49D};
+        double[] result = new double[input.length];
+        for(var i = 0; i < input.length; ++i) {
+            result[i] = Math.pow(input[i], 2D);
+        }
+        return result;
     }
 }

@@ -110,4 +110,16 @@ public class StatisticTest {
         // Then
         assertArrayEquals(new double[]{1D, 25D, 49D}, result);
    }
+    
+    @Test
+    void shouldReturnFourSixteenSixtyFourForSquareOfTwoMinusFourAndEight() {
+        // Given
+        double[] input = {2D, -4D, 8D};
+        
+        // When
+        double result[] = Statistic.square(input);
+        
+        // Then
+        assertArrayEquals(new double[]{4D, 16D, 64D}, result);
+   }
 }
