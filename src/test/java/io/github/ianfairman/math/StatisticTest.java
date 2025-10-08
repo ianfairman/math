@@ -99,4 +99,15 @@ public class StatisticTest {
         assertArrayEquals(new double[]{-3D, 3D}, result);
     }
     
+    @Test
+    void shouldReturnOneTwentyFiveFortyNineForSquareOfOneFiveAndSeven() {
+        // Given
+        double[] input = {1D, 5D, 7D};
+        
+        // When
+        double result[] = Statistic.square(input);
+        
+        // Then
+        assertArrayEquals(new double[]{1D, 25D, 49D}, result);
+   }
 }
