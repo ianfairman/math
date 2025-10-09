@@ -150,12 +150,23 @@ public class StatisticTest {
     @Test
     void shouldCalculateStandardDeviation1() {
         // Given
-        double[] input = {46D, 69D, 32D, 60D, 52D, 41D};
+        double[] input = {7D, 9D, 11D, 13D, 15D};
         
         // When
         double result = Statistic.populationStandardDeviation(input);
         
         // Then
-        assertEquals(13.31D, result, 0.01D);
+        assertEquals(2.83D, result, 0.01D);
+    }
+    
+    @Test
+    void shouldCalculateStandardDeviation2() {
+        // Given
+        double[] input = {2D, 4D, 4D, 4D, 5D, 5D, 7D, 9D};        
+        // When
+        double result = Statistic.populationStandardDeviation(input);
+        
+        // Then
+        assertEquals(2, result, 0.1D);
     }
 }

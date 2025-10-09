@@ -56,6 +56,6 @@ public class Statistic {
     }
 
     public static double populationStandardDeviation(double[] input) {
-        return 13.31D;
+        return Math.sqrt(populationVariance(input));
     }
 }
