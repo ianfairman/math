@@ -43,7 +43,7 @@ public class Statistic {
         return result;
     }
 
-    static double[] square(double[] input) {
+    public static double[] square(double[] input) {
         double[] result = new double[input.length];
         for(var i = 0; i < input.length; ++i) {
             result[i] = Math.pow(input[i], 2D);
@@ -51,7 +51,7 @@ public class Statistic {
         return result;
     }
 
-    static double populationVariance(double[] input) {
+    public static double populationVariance(double[] input) {
         return arithmeticMean(square(deviation(input)));
     }
 
