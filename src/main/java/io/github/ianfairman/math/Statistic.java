@@ -63,7 +63,7 @@ public class Statistic {
         return sum(square(deviation(input)))/(input.length - 1);
     }
 
-    static double sampleStandardDeviation(double[] input) {
+    public static double sampleStandardDeviation(double[] input) {
         return Math.sqrt(sampleVariance(input));
     }
 }
