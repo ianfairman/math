@@ -204,5 +204,17 @@ public class StatisticTest {
         
         // Then
         assertEquals(3.16D, result, 0.01D);
+    }    
+      
+    @Test
+    void shouldCalculateSampleStandardDeviation2() {
+        // Given
+        double[] input = {2D, 4D, 4D, 4D, 5D, 5D, 7D, 9D};        
+
+        // When
+        double result = Statistic.sampleStandardDeviation(input);
+        
+        // Then
+        assertEquals(2.138D, result, 0.001D);
     }
 }

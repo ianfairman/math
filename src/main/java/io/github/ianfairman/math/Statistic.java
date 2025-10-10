@@ -64,6 +64,6 @@ public class Statistic {
     }
 
     static double sampleStandardDeviation(double[] input) {
-        return 3.16D;
+        return Math.sqrt(sampleVariance(input));
     }
 }
