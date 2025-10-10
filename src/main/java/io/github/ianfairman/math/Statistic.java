@@ -58,4 +58,8 @@ public class Statistic {
     public static double populationStandardDeviation(double[] input) {
         return Math.sqrt(populationVariance(input));
     }
+
+    public static double sampleVariance(double[] input) {
+        return sum(square(deviation(input)))/(input.length - 1);
+    }
 }

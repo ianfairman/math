@@ -169,4 +169,28 @@ public class StatisticTest {
         // Then
         assertEquals(2, result, 0.1D);
     }
+           
+   @Test
+    void shouldCalculateSampleVariance1() {
+        // Given
+        double[] input = {1D, 2D, 3D, 4D, 5D, 6D, 7D};
+        
+        // When
+        double result = Statistic.sampleVariance(input);
+        
+        // Then
+        assertEquals(4.67D, result, 0.01D);
+    }
+           
+   @Test
+    void shouldCalculateSampleVariance2() {
+        // Given
+        double[] input = {2D, 3D, 5D, 7D, 11D, 13D, 17, 23D};
+        
+        // When
+        double result = Statistic.sampleVariance(input);
+        
+        // Then
+        assertEquals(53.5D, result, 0.1D);
+    }
 }
