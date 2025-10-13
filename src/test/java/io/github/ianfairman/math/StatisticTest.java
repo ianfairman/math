@@ -255,7 +255,7 @@ public class StatisticTest {
     }
     
     @Test
-    void shouldCalculateMedianForFourSortedItems() {
+    void shouldCalculateMedianForFourSortedItems1() {
         // Given
         double[] input = {1D, 2D, 3D, 4D};
         
@@ -264,5 +264,17 @@ public class StatisticTest {
         
         // Then
         assertEquals(2.5D, result, 0.001);
+    }
+    
+    @Test
+    void shouldCalculateMedianForFourSortedItems2() {
+        // Given
+        double[] input = {10D, 20D, 30D, 40D};
+        
+        // When
+        double result = Statistic.median(input);
+        
+        // Then
+        assertEquals(25D, result, 0.001);
     }
 }
