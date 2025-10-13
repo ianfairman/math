@@ -217,4 +217,16 @@ public class StatisticTest {
         // Then
         assertEquals(2.138D, result, 0.001D);
     }
+    
+    @Test
+    void shouldCalculateMedianForSingleItem1() {
+        // Given
+        double[] input = {5D};
+        
+        // When
+        double result = Statistic.median(input);
+        
+        // Then
+        assertEquals(5D, result, 0.001);
+    }
 }
