@@ -1,5 +1,6 @@
 package io.github.ianfairman.math;
 
+import static java.lang.System.arraycopy;
 import static java.util.Arrays.sort;
 
 /*
@@ -70,11 +71,13 @@ public class Statistic {
     }
 
     public static double median(double[] input) {
-        sort(input);
+        double[] inputCopy = new double[input.length];
+        arraycopy(input, 0, inputCopy, 0, input.length);
+        sort(inputCopy);
         int middleIndex = input.length / 2;
         if (input.length % 2 == 0) {
-            return (input[middleIndex] + input[middleIndex - 1]) / 2;
+            return (inputCopy[middleIndex] + inputCopy[middleIndex - 1]) / 2;
         }   
-        return input[middleIndex];
+        return inputCopy[middleIndex];
     }
 }

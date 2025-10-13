@@ -289,4 +289,16 @@ public class StatisticTest {
         // Then
         assertEquals(25D, result, 0.001);
     }
+    
+    @Test
+    void shouldNotInterfereWithInput() {
+        // Given
+        double[] input = {20D, 30D, 10D};
+        
+        // When
+        double _ = Statistic.median(input);
+        
+        // Then
+        assertEquals(20D, input[0], 0.001);
+    }
 }
