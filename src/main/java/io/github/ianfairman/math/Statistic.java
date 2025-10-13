@@ -68,6 +68,6 @@ public class Statistic {
     }
 
     public static double median(double[] input) {
-        return 5D;
+        return input[0];
     }
 }
