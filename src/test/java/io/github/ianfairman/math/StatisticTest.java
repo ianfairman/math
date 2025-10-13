@@ -241,4 +241,16 @@ public class StatisticTest {
         // Then
         assertEquals(6D, result, 0.001);
     }
+    
+    @Test
+    void shouldCalculateMedianForThreeSortedItems() {
+        // Given
+        double[] input = {1D, 2D, 3D};
+        
+        // When
+        double result = Statistic.median(input);
+        
+        // Then
+        assertEquals(2D, result, 0.001);
+    }
 }

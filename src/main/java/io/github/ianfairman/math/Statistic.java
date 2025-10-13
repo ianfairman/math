@@ -68,6 +68,7 @@ public class Statistic {
     }
 
     public static double median(double[] input) {
-        return input[0];
+        int middleIndex = input.length / 2;
+        return input[middleIndex];
     }
 }
