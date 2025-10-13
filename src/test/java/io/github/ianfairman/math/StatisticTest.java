@@ -255,6 +255,18 @@ public class StatisticTest {
     }
     
     @Test
+    void shouldCalculateMedianForThreeUnsortedItems() {
+        // Given
+        double[] input = {2D, 3D, 1D};
+        
+        // When
+        double result = Statistic.median(input);
+        
+        // Then
+        assertEquals(2D, result, 0.001);
+    }
+    
+    @Test
     void shouldCalculateMedianForFourSortedItems1() {
         // Given
         double[] input = {1D, 2D, 3D, 4D};

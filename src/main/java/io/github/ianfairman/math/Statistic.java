@@ -1,5 +1,7 @@
 package io.github.ianfairman.math;
 
+import static java.util.Arrays.sort;
+
 /*
  * Copyright 2025 Ian Fairman <ian.fairman@gmail.com>.
  *
@@ -68,6 +70,7 @@ public class Statistic {
     }
 
     public static double median(double[] input) {
+        sort(input);
         int middleIndex = input.length / 2;
         if (input.length % 2 == 0) {
             return (input[middleIndex] + input[middleIndex - 1]) / 2;
