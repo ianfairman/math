@@ -105,4 +105,17 @@ public class TwoWayTableTest {
         // Then
         assertEquals(3, numberOfColumns);
     }
+        
+    @Test
+    void shouldCalculateNumberOfColumns2() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        var numberOfColumns = table.numberOfColumns();
+        
+        // Then
+        assertEquals(4, numberOfColumns);
+    }
 }
