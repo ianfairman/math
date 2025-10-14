@@ -45,6 +45,6 @@ public class TwoWayTable {
     }
     
     public int numberOfColumns() {
-        return 3;
+        return array[0].length;
     }
 }
