@@ -15,6 +15,7 @@
  */
 package io.github.ianfairman.math;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
@@ -63,5 +64,19 @@ public class TwoWayTableTest {
         }
         // Then
         fail();
+    }
+    
+    @Test
+    void shouldCalculateLengthForRow() {
+        // Given
+        double[][] array = {{2D, 3D, 4D}, {5D, 6D, 7D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        var numberOfRows = table.numberOfRows();
+        
+        // Then
+        assertEquals(2, numberOfRows);
+        
     }
 }
