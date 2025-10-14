@@ -91,4 +91,18 @@ public class TwoWayTableTest {
         // Then
         assertEquals(3, numberOfRows);
     }
+    
+        
+    @Test
+    void shouldCalculateNumberOfColumns1() {
+        // Given
+        double[][] array = {{2D, 3D, 4D}, {5D, 6D, 7D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        var numberOfColumns = table.numberOfColumns();
+        
+        // Then
+        assertEquals(3, numberOfColumns);
+    }
 }
