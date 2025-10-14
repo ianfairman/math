@@ -46,6 +46,22 @@ public class TwoWayTableTest {
         } catch (NullPointerException _) {
             return;
         }
+        // Then
+        fail();
+    }
+    
+    @Test
+    void shouldNotAccepNontRectangularArray() {
+        // Given
+        double[][] array = {{2D, 3D, 4D}, {5D, 6D}};
+        
+        // When
+        try {
+            var _ = new TwoWayTable(array);
+        } catch (IllegalArgumentException _) {
+            return;
+        }
+        // Then
         fail();
     }
 }

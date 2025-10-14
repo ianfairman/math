@@ -25,6 +25,15 @@ public class TwoWayTable {
 
     public TwoWayTable(double[][] array) {
         requireNonNull(array);
+        checkIsRectangular(array);
     }
-    
+
+    private void checkIsRectangular(double[][] array) throws IllegalArgumentException {
+        var firstLength = array[0].length;
+        for(var i = 1; i < array.length; ++i) {
+            if (firstLength != array[i].length) {
+                throw new IllegalArgumentException();
+            }
+        }
+    }    
 }
