@@ -23,9 +23,12 @@ import static java.util.Objects.requireNonNull;
  */
 public class TwoWayTable {
 
+    private final double[][] array;
+    
     public TwoWayTable(double[][] array) {
         requireNonNull(array);
         checkIsRectangular(array);
+        this.array = array;
     }
 
     private void checkIsRectangular(double[][] array) throws IllegalArgumentException {
@@ -35,5 +38,9 @@ public class TwoWayTable {
                 throw new IllegalArgumentException();
             }
         }
-    }    
+    }
+
+    public int numberOfRows() {
+        return array.length;
+    }
 }

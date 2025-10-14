@@ -67,7 +67,7 @@ public class TwoWayTableTest {
     }
     
     @Test
-    void shouldCalculateLengthForRow() {
+    void shouldCalculateLengthForRow1() {
         // Given
         double[][] array = {{2D, 3D, 4D}, {5D, 6D, 7D}};
         var table = new TwoWayTable(array);
@@ -77,6 +77,18 @@ public class TwoWayTableTest {
         
         // Then
         assertEquals(2, numberOfRows);
+    }
+    
+    @Test
+    void shouldCalculateLengthForRow2() {
+        // Given
+        double[][] array = {{2D, 3D, 4D}, {5D, 6D, 7D}, {8D, 9D, 10D}};
+        var table = new TwoWayTable(array);
         
+        // When
+        var numberOfRows = table.numberOfRows();
+        
+        // Then
+        assertEquals(3, numberOfRows);
     }
 }
