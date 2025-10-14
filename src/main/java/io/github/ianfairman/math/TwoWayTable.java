@@ -15,6 +15,8 @@
  */
 package io.github.ianfairman.math;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  *
  * @author Ian Fairman <ian.fairman@gmail.com>
@@ -22,6 +24,7 @@ package io.github.ianfairman.math;
 public class TwoWayTable {
 
     public TwoWayTable(double[][] array) {
+        requireNonNull(array);
     }
     
 }

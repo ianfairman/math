@@ -33,7 +33,19 @@ public class TwoWayTableTest {
         try {
             var _ = new TwoWayTable(array);
         } catch (IllegalArgumentException _) {
+            // Then
             fail();
         }
+    }
+    
+    @Test
+    void shouldNotExceptNull() {
+        try {
+            // When
+            var _ = new TwoWayTable(null);
+        } catch (NullPointerException _) {
+            return;
+        }
+        fail();
     }
 }
