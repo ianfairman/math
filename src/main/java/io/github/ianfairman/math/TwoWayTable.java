@@ -70,6 +70,10 @@ public class TwoWayTable {
     }
 
     public double[] mediansOfRows() {
-        return new double[] {3.5D, 6.5D, 9.5D};
+        double[] medians = new double[numberOfRows()];
+        for (var rowIndex = 0; rowIndex < numberOfRows(); ++rowIndex) {
+            medians[rowIndex] = medianOfRow(rowIndex);
+        }
+        return medians;
     }
 }
