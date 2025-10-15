@@ -182,7 +182,7 @@ public class TwoWayTableTest {
         double medianOfRow = table.medianOfRow(0);
         
         // Then
-        assertEquals(3.5, medianOfRow, 0.0001D);
+        assertEquals(3.5D, medianOfRow, 0.0001D);
     }
     
     @Test
@@ -195,6 +195,19 @@ public class TwoWayTableTest {
         double medianOfRow = table.medianOfRow(1);
         
         // Then
-        assertEquals(6.5, medianOfRow, 0.0001D);
+        assertEquals(6.5D, medianOfRow, 0.0001D);
+    }
+    
+    @Test
+    void shouldFindMedianOfColumnZero() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}, {8D, 9D, 10D, 11D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double medianOfColumn = table.medianOfColumn(0);
+        
+        // Then
+        assertEquals(5D, medianOfColumn, 0.0001D);
     }
 }
