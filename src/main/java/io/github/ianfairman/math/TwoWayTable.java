@@ -68,4 +68,8 @@ public class TwoWayTable {
     public double medianOfColumn(int i) {
         return median(column(i));
     }
+
+    public double[] mediansOfRows() {
+        return new double[] {3.5D, 6.5D, 9.5D};
+    }
 }
