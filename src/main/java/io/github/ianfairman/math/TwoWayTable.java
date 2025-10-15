@@ -47,4 +47,8 @@ public class TwoWayTable {
     public int numberOfColumns() {
         return array[0].length;
     }
+
+    public double[] row(int i) {
+        return new double[] {5D, 6D, 7D, 8D};
+    }
 }

@@ -15,6 +15,7 @@
  */
 package io.github.ianfairman.math;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
@@ -117,5 +118,19 @@ public class TwoWayTableTest {
         
         // Then
         assertEquals(4, numberOfColumns);
+    }
+    
+    @Test
+    void shouldExtractRow() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double[] row = table.row(1);
+        
+        // Then
+        assertArrayEquals(new double[] {5D, 6D, 7D, 8D}, row);
+
     }
 }
