@@ -15,6 +15,7 @@
  */
 package io.github.ianfairman.math;
 
+import static io.github.ianfairman.math.Statistic.median;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -61,6 +62,6 @@ public class TwoWayTable {
     }
 
     public double medianOfRow(int i) {
-        return 3.5D;
+        return median(row(i));
     }
 }
