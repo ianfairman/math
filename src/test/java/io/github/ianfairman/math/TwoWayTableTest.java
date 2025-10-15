@@ -210,4 +210,17 @@ public class TwoWayTableTest {
         // Then
         assertEquals(5D, medianOfColumn, 0.0001D);
     }
+    
+    @Test
+    void shouldFindMedianOfColumnThree() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}, {8D, 9D, 10D, 11D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double medianOfColumn = table.medianOfColumn(3);
+        
+        // Then
+        assertEquals(8D, medianOfColumn, 0.0001D);
+    }
 }

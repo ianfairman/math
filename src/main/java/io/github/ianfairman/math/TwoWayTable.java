@@ -66,6 +66,6 @@ public class TwoWayTable {
     }
 
     public double medianOfColumn(int i) {
-        return 5D;
+        return median(column(i));
     }
 }
