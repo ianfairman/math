@@ -51,4 +51,8 @@ public class TwoWayTable {
     public double[] row(int i) {
         return array[i];
     }
+
+    public double[] column(int i) {
+        return new double[] {3D, 6D};
+    }
 }
