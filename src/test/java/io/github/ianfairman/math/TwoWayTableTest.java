@@ -146,7 +146,6 @@ public class TwoWayTableTest {
         assertArrayEquals(new double[] {2D, 3D, 4D, 5D}, row);
     }
     
-        
     @Test
     void shouldExtractColumn1() {
         // Given
@@ -154,9 +153,22 @@ public class TwoWayTableTest {
         var table = new TwoWayTable(array);
         
         // When
-        double[] row = table.column(1);
+        double[] column = table.column(1);
         
         // Then
-        assertArrayEquals(new double[] {3D, 6D}, row);
+        assertArrayEquals(new double[] {3D, 6D}, column);
+    }
+    
+    @Test
+    void shouldExtractColumn3() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double[] column = table.column(3);
+        
+        // Then
+        assertArrayEquals(new double[] {5D, 8D}, column);
     }
 }

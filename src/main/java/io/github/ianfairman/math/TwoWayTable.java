@@ -52,7 +52,11 @@ public class TwoWayTable {
         return array[i];
     }
 
-    public double[] column(int i) {
-        return new double[] {3D, 6D};
+    public double[] column(int columnIndex) {
+        var result = new double[numberOfRows()];
+        for (var rowIndex = 0; rowIndex < numberOfRows(); ++rowIndex) {
+            result[rowIndex] = array[rowIndex][columnIndex];
+        }
+        return result;
     }
 }
