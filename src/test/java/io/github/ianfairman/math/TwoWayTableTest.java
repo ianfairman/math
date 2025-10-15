@@ -121,7 +121,7 @@ public class TwoWayTableTest {
     }
     
     @Test
-    void shouldExtractRow() {
+    void shouldExtractRow1() {
         // Given
         double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}};
         var table = new TwoWayTable(array);
@@ -131,6 +131,18 @@ public class TwoWayTableTest {
         
         // Then
         assertArrayEquals(new double[] {5D, 6D, 7D, 8D}, row);
-
+    }
+    
+    @Test
+    void shouldExtractRow2() {
+        // Given
+        double[][] array = {{2D, 3D, 4D, 5D}, {5D, 6D, 7D, 8D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double[] row = table.row(0);
+        
+        // Then
+        assertArrayEquals(new double[] {2D, 3D, 4D, 5D}, row);
     }
 }
