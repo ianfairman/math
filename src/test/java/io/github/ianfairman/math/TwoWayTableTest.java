@@ -15,8 +15,10 @@
  */
 package io.github.ianfairman.math;
 
+import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
@@ -286,5 +288,17 @@ public class TwoWayTableTest {
         
         // Then
         assertEquals(table0, table1);
+    }
+    
+    @Test
+    void shouldSupportEquals1() {
+        // Given
+        double[][] array0 = {{5D, 1D, 4D, 7D}, {1D, 5D, 5D, 7D}, {100D, -1D, 1D, 87D}};
+        var table0 = new TwoWayTable(array0);
+        double[][] array1 = {{6D, 1D, 4D, 7D}, {1D, 5D, 5D, 7D}, {100D, -1D, 1D, 87D}};
+        var table1 = new TwoWayTable(array1);
+        
+        // Then
+        assertNotEquals(table0, table1);
     }
 }

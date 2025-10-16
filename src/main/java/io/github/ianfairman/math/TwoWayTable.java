@@ -16,6 +16,7 @@
 package io.github.ianfairman.math;
 
 import static io.github.ianfairman.math.Statistic.median;
+import java.util.Arrays;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -86,7 +87,24 @@ public class TwoWayTable {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + Arrays.deepHashCode(this.array);
+        return hash;
+    }
+
+    @Override
     public boolean equals(Object obj) {
-        return true;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final TwoWayTable other = (TwoWayTable) obj;
+        return Arrays.deepEquals(this.array, other.array);
     }
 }
