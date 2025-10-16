@@ -78,6 +78,10 @@ public class TwoWayTable {
     }
 
     public double[] mediansOfColumns() {
-        return new double[] {2D, 4D, 6D, 10D};
+        double[] medians = new double[numberOfColumns()];
+        for (var columnIndex = 0; columnIndex < numberOfColumns(); ++columnIndex) {
+            medians[columnIndex] = medianOfColumn(columnIndex);
+        }
+        return medians;
     }
 }

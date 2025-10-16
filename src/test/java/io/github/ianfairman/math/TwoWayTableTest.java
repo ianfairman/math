@@ -261,4 +261,16 @@ public class TwoWayTableTest {
         // Then
         assertArrayEquals(new double[] {2D, 4D, 6D, 10D}, mediansOfColumns, 0.0001);
     }
+
+    @Test
+    void shouldFindMediansOfColumns2() {
+        double[][] array = {{5D, 1D, 4D, 7D}, {1D, 5D, 5D, 7D}, {100D, -1D, 1D, 87D}};
+        var table = new TwoWayTable(array);
+        
+        // When
+        double[] mediansOfColumns= table.mediansOfColumns();
+        
+        // Then
+        assertArrayEquals(new double[] {5D, 1D, 4D, 7D}, mediansOfColumns, 0.0001);
+    }
 }
