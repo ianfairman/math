@@ -301,4 +301,16 @@ public class StatisticTest {
         // Then
         assertEquals(20D, input[0], 0.001);
     }
+    
+    @Test
+    void shouldSubtractValueFromEveryElementInArray() {
+        // Given
+        double[] input = {2D, 3D, 5D, 8D, 11D};
+        
+        // When
+        double[] output = Statistic.subtractFromAll(input, 2D);
+        
+        // Then
+        assertArrayEquals(new double[]{0D, 1D, 3D, 6D, 9D}, output);
+     }
 }

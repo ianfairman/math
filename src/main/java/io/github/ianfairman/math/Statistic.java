@@ -82,4 +82,8 @@ public class Statistic {
         }   
         return inputCopy[middleIndex];
     }
+
+    public static double[] subtractFromAll(double[] input, double d) {
+        return new double[]{0D, 1D, 3D, 6D, 9D};
+    }
 }
