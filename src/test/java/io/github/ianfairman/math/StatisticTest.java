@@ -303,7 +303,7 @@ public class StatisticTest {
     }
     
     @Test
-    void shouldSubtractValueFromEveryElementInArray() {
+    void shouldSubtractValueFromEveryElementInArray0() {
         // Given
         double[] input = {2D, 3D, 5D, 8D, 11D};
         
@@ -312,5 +312,17 @@ public class StatisticTest {
         
         // Then
         assertArrayEquals(new double[]{0D, 1D, 3D, 6D, 9D}, output);
+     }
+    
+        @Test
+    void shouldSubtractValueFromEveryElementInArray1() {
+        // Given
+        double[] input = {1D, 2D, 4D, 8D};
+        
+        // When
+        double[] output = Statistic.subtractFromAll(input, 16D);
+        
+        // Then
+        assertArrayEquals(new double[]{-15D, -14D, -12D, -8D}, output);
      }
 }

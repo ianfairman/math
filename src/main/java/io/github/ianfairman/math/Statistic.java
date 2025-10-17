@@ -83,7 +83,11 @@ public class Statistic {
         return inputCopy[middleIndex];
     }
 
-    public static double[] subtractFromAll(double[] input, double d) {
-        return new double[]{0D, 1D, 3D, 6D, 9D};
+    public static double[] subtractFromAll(double[] input, double constant) {
+        var result = new double[input.length];
+        for (var index = 0; index < input.length; ++index) {
+            result[index] = input[index] - constant;
+        }
+        return result;
     }
 }
